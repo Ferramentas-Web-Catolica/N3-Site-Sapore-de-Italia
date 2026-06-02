@@ -1,0 +1,47 @@
+/* Header */
+
+.header {
+    background-color: var(--vermelho);
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    color: var(--bege);
+    font-size: 22px;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.header-menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.header-menu a {
+    color: var(--bege);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.header-menu a:hover {
+    color: var(--dourado);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header-menu {
+        display: none;
+    }
+}

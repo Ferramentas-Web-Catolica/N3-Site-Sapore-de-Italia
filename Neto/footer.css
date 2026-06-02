@@ -1,0 +1,41 @@
+/* Footer */
+
+.footer {
+    background-color: var(--vermelho);
+    color: var(--bege);
+    padding: 30px 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-item h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.footer-item p {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--bege);
+    font-size: 13px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
