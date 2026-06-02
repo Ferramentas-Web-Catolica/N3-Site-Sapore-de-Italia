@@ -1,0 +1,45 @@
+
+.botao {
+    display: inline-block;
+    padding: 12px 28px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.botao-verde {
+    background-color: var(--verde);
+    color: var(--bege);
+}
+
+.botao-vermelho {
+    background-color: var(--vermelho);
+    color: var(--bege);
+}
+
+.botao-preto {
+    background-color: var(--preto);
+    color: var(--branco);
+}
+
+.botao-bege {
+    background-color: var(--bege);
+    color: var(--vermelho);
+}
+
+.botao-dourado {
+    background-color: var(--dourado);
+    color: var(--preto);
+}
+
+@media (max-width: 600px) {
+    .botao {
+        padding: 10px 20px;
+        font-size: 13px;
+        width: 100%;
+    }
+}
