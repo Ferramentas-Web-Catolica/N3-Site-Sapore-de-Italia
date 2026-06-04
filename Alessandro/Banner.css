@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* O container dita o espaço que a imagem ocupa */
+.container-Banner {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+/* A imagem se adapta ao tamanho da tela */
+.Banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* O botão agora é posicionado em relação à imagem */
+.reservar {
+    position: absolute;
+    
+    /* Coordenadas para cravar o botão no círculo amarelo que você desenhou */
+    top: 55%;                   /* Distância medida do topo da imagem para o centro */
+    left: 50%;                  /* Joga o botão para o meio do eixo horizontal */
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente nos eixos X e Y */
+
+    /* Estilização visual do botão */
+    color: white;
+    background-color: #6B1F2A;
+    padding: 18px 35px;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para dar destaque sobre a foto */
+    transition: background 0.3s;
+}
+
+.reservar:hover {
+    background-color: #852735; /* Efeito ao passar o mouse */
+}
+
+/* --- RESPONSIVIDADE PARA CELULARES --- */
+@media (max-width: 768px) {
+    .reservar {
+        top: 55%;               /* Mantém a mesma proporção de altura no celular */
+        padding: 10px 20px;     /* Diminui o botão para não cobrir a comida */
+        font-size: 12px;        /* Letra menor para telas menores */
+        border-radius: 8px;
+    }
+}
