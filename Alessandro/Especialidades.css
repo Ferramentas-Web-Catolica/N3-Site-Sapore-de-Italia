@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcf9f5; /* Um fundo suave para contrastar com o painel */
+}
+
+/* O grande painel vinho de fundo */
+.container-especialidades {
+    background-color: #6B1F2A; 
+    padding: 60px 40px;
+    border-radius: 30px;       
+    max-width: 1100px;         
+    margin: 40px auto;         
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Título principal */
+.titulo-especialidades {
+    color: white;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+/* Alinhamento dos cards */
+.grid-especialidades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;                 
+    justify-items: center;
+}
+
+/* Estrutura de cada prato */
+.card-prato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;          
+}
+
+/* A moldura preta com cantos arredondados ao redor da foto */
+.moldura-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;       
+    border: 3px solid #000000; 
+    border-radius: 25px;       
+    overflow: hidden;          
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4); 
+    margin-bottom: 20px;
+}
+
+/* Garante que a foto preencha a moldura sem distorcer */
+.moldura-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         
+    display: block;
+}
+
+/* Nome do prato embaixo da foto */
+.card-prato h3 {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 768px) {
+    .container-especialidades {
+        margin: 20px 15px;     
+        padding: 40px 20px;
+        border-radius: 20px;
+    }
+    
+    .titulo-especialidades {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .grid-especialidades {
+        gap: 30px;
+    }
+}
