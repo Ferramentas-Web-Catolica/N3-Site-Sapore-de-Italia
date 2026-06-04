@@ -1,3 +1,7 @@
+/* ==========================================================================
+   ARQUIVO: Especialidades.css (Sapore D'Italia) - COM CARROSSEL NO CELULAR
+   ========================================================================== */
+
 body {
     margin: 0;
     padding: 0;
@@ -25,7 +29,7 @@ body {
     letter-spacing: 1px;
 }
 
-/* Alinhamento dos cards */
+/* Alinhamento dos cards no Computador */
 .grid-especialidades {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -71,11 +75,13 @@ body {
     line-height: 1.4;
 }
 
-/* --- RESPONSIVIDADE --- */
+/* ==========================================================================
+   --- RESPONSIVIDADE (A JUSTADO PARA VIRAR CARROSSEL NO CELULAR) --- 
+   ========================================================================== */
 @media (max-width: 768px) {
     .container-especialidades {
         margin: 20px 15px;     
-        padding: 40px 20px;
+        padding: 40px 15px 30px 15px; /* Ajuste sutil no respiro inferior */
         border-radius: 20px;
     }
     
@@ -84,7 +90,44 @@ body {
         margin-bottom: 30px;
     }
     
+    /* MODIFICAÇÃO CHAVE: Transforma a grade em carrossel horizontal de linha única */
     .grid-especialidades {
-        gap: 30px;
+        display: flex;             /* Força o alinhamento Flexbox */
+        flex-direction: row;       /* Deixa os pratos lado a lado */
+        flex-wrap: nowrap;         /* Proíbe os pratos de pularem de linha */
+        gap: 20px;                 /* Distância entre os pratos no celular */
+        width: 100%;
+        overflow-x: auto;          /* Cria a mágica do scroll por toque lateral */
+        padding: 10px 15px 25px 15px; /* Adiciona respiro para as sombras não cortarem */
+        box-sizing: border-box;
+        
+        /* Suaviza a rolagem de arrastar no toque */
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    /* Esconde a barra de rolagem padrão do navegador para o design ficar limpo */
+    .grid-especialidades::-webkit-scrollbar {
+        height: 5px;
+    }
+    .grid-especialidades::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.3); /* Barra branca bem sutil combinando com o vinho */
+        border-radius: 10px;
+    }
+
+    /* TRAVA DA LARGURA NO CELULAR: Garante que os pratos fiquem magros e alongados sem amassar */
+    .card-prato {
+        flex: 0 0 200px;           /* Define que cada prato terá sempre 200px de largura fixa no celular */
+        max-width: 200px;
+    }
+    
+    /* Ajusta a moldura para o tamanho menor de tela */
+    .moldura-img {
+        margin-bottom: 12px;
+    }
+
+    /* Ajuste sutil na fonte do prato para caber bem */
+    .card-prato h3 {
+        font-size: 16px;
     }
 }
