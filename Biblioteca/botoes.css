@@ -1,20 +1,22 @@
+/* Biblioteca de Botões - Sapore D'Italia
+   Como usar:
+     <button class="botao botao-verde">Texto</button>
+*/
 
-/* BOTOES PADRÕES NÃO MEXER */
-/* BOTOES PADRÕES NÃO MEXER */
-/* BOTOES PADRÕES NÃO MEXER */
-/* BOTOES PADRÕES NÃO MEXER */
-
+/* Estilo base de todos os botões (.botao) */
 .botao {
-    display: inline-block;
-    padding: 12px 28px;
+    display: inline-block;          /* permite definir padding e largura */
+    padding: 12px 28px;             /* espaço interno */
     font-weight: bold;
     font-size: 14px;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
+    text-transform: uppercase;      /* deixa tudo em MAIÚSCULO */
+    text-decoration: none;          /* tira sublinhado quando for <a> */
+    border: none;                   /* tira a borda padrão de <button> */
+    border-radius: 6px;             /* cantos arredondados */
+    cursor: pointer;                /* mostra mãozinha no hover */
 }
+
+/* Variantes por cor — basta combinar com a classe base */
 
 .botao-verde {
     background-color: var(--verde);
@@ -41,10 +43,11 @@
     color: var(--preto);
 }
 
+/* ======== MOBILE (telas até 600px) ======== */
 @media (max-width: 600px) {
     .botao {
-        padding: 10px 20px;
+        padding: 10px 20px;          /* botões menores */
         font-size: 13px;
-        width: 100%;
+        width: 100%;                 /* ocupa toda a largura no mobile */
     }
 }

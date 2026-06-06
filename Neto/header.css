@@ -1,54 +1,59 @@
-/* Header */
+/* Header - Estilos do cabeçalho do site */
 
 .header {
-    background-color: var(--vermelho);
-    padding: 15px 30px;
+    background-color: var(--vermelho);   /* cor de fundo (variável da biblioteca) */
+    padding: 15px 30px;                  /* espaço interno: 15px em cima/baixo, 30px nos lados */
 }
 
+/* Container que segura logo + nome + hambúrguer */
 .header-top {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    align-items: center;
+    display: grid;                            /* usa grid pra dividir em colunas */
+    grid-template-columns: 1fr auto 1fr;      /* 3 colunas: lateral / centro / lateral */
+    align-items: center;                      /* alinha tudo no meio verticalmente */
 }
 
+/* A imagem da logo (lado esquerdo) */
 .header-logo-icon {
     width: 50px;
     height: 50px;
-    justify-self: start;
+    justify-self: start;                 /* gruda na coluna da esquerda */
 }
 
+/* O texto "Sapore D'Italia" (centralizado) */
 .header-logo {
-    justify-self: center;
+    justify-self: center;                /* fica no meio da grid */
     color: var(--branco);
-    text-decoration: none;
+    text-decoration: none;               /* tira o sublinhado do link */
     font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 48px;
+    font-weight: 500;                    /* Poppins Medium */
+    font-size: 32px;
 }
 
+/* Botão hambúrguer (só aparece no mobile) */
 .hamburguer {
-    justify-self: end;
+    justify-self: end;                   /* gruda no canto direito */
     background-color: var(--vermelho-escuro);
     border: none;
     padding: 10px 12px;
     cursor: pointer;
     border-radius: 4px;
-    display: none;
+    display: none;                       /* escondido por padrão (mostra só no mobile) */
 }
 
+/* Cada uma das 3 linhas do hambúrguer */
 .hamburguer-linha {
-    display: block;
+    display: block;                      /* faz a span virar bloco pra empilhar */
     width: 22px;
     height: 2px;
     background-color: var(--branco);
-    margin: 5px 0;
+    margin: 5px 0;                       /* espaço entre as linhas */
 }
 
-/* Navegação desktop dentro do header */
+/* Menu de navegação do desktop (HOME, MENU, RESERVAS, CONTATO) */
 .header-nav ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
+    display: flex;                       /* coloca os itens em linha */
+    justify-content: space-around;       /* distribui espaço entre eles */
+    list-style: none;                    /* tira as bolinhas da lista */
     margin: 12px 0 0;
     padding: 0;
 }
@@ -58,33 +63,33 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    letter-spacing: 1px;
+    letter-spacing: 1px;                 /* dá um espaço entre as letras */
 }
 
 .header-nav a:hover {
-    color: var(--dourado);
+    color: var(--dourado);              
 }
 
-/* Mobile */
+/* ======== MOBILE (telas até 768px) ======== */
 @media (max-width: 768px) {
     .header {
-        padding: 12px 20px;
+        padding: 12px 20px;              /* padding menor no mobile */
     }
 
     .header-logo {
-        font-size: 20px;
+        font-size: 20px;                 /* nome fica menor */
     }
 
     .header-logo-icon {
-        width: 32px;
+        width: 32px;                     /* logo fica menor */
         height: 32px;
     }
 
     .hamburguer {
-        display: block;
+        display: block;                  /* mostra o hambúrguer */
     }
 
     .header-nav {
-        display: none;
+        display: none;                   /* esconde o menu desktop */
     }
 }
