@@ -1,53 +1,43 @@
-/* Menu Hambúrguer (mobile) */
-
-.hamburguer {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: none;
-}
-
-.hamburguer-linha {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: var(--bege);
-    margin: 5px 0;
-}
+/* Menu Hambúrguer - dropdown que abre no mobile */
 
 .menu-mobile {
-    display: none;
-    background-color: var(--vermelho-escuro);
-    list-style: none;
+    display: none;                       /* escondido por padrão */
+    background-color: var(--bege);     
+}
+
+.menu-mobile ul {
+    list-style: none;                    /* tira as bolinhas */
     margin: 0;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .menu-mobile li {
-    text-align: center;
-    padding: 12px 0;
+    text-align: center;                  /* centraliza o texto */
+    padding: 10px 0;                     /* espaço em cima/baixo de cada item */
 }
 
 .menu-mobile a {
-    color: var(--bege);
+    color: var(--vermelho);
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
 .menu-mobile a:hover {
-    color: var(--dourado);
+    color: var(--vermelho-escuro);       /* muda de cor no hover */
 }
 
-/* Quando o menu está aberto */
+/* Classe aplicada pelo JS quando clica no hambúrguer */
 .menu-mobile.aberto {
-    display: block;
+    display: block;                      /* mostra o menu */
 }
 
-/* Mostrar hambúrguer só no mobile */
-@media (max-width: 768px) {
-    .hamburguer {
-        display: block;
+/* ======== DESKTOP (telas a partir de 769px) ======== */
+@media (min-width: 769px) {
+    /* No desktop o menu hambúrguer nunca aparece (mesmo se tiver a classe "aberto") */
+    .menu-mobile,
+    .menu-mobile.aberto {
+        display: none;
     }
 }

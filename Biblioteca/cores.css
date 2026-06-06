@@ -1,21 +1,28 @@
-/* CORES PADRÕES NÃO MEXER */
-/* CORES PADRÕES NÃO MEXER */
-/* CORES PADRÕES NÃO MEXER */
-/* CORES PADRÕES NÃO MEXER */
+/* Biblioteca de Cores - Sapore D'Italia */
 
+/* Importa a fonte Poppins do Google Fonts (vários pesos) */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variáveis CSS — definem as cores do site numa central só
+   Pra usar nos outros arquivos: color: var(--vermelho); */
 :root {
-    --vermelho: #6B1F2A;
-    --vermelho-escuro: #4A1218;
+    --vermelho: #6B1F2A;            /* cor principal: header e footer */
+    --vermelho-escuro: #4A1218;     /* tom mais escuro do vermelho */
 
-    --verde: #2D5F3F;
-    --verde-escuro: #1F4A2E;
+    --verde: #2D5F3F;               /* botão verde (reservar/confirmar) */
+    --verde-escuro: #1F4A2E;        /* tom mais escuro do verde */
 
-    --bege: #F5E6D3;
-    --bege-claro: #FAF1E3;
+    --bege: #F5E6D3;                /* fundo de cards e menu mobile */
+    --bege-claro: #FAF1E3;          /* fundo geral do site */
 
-    --dourado: #C9A961;
+    --dourado: #C9A961;             /* destaque (estrelas, hover) */
 
     --preto: #1A1A1A;
     --cinza: #7A7A7A;
     --branco: #FFFFFF;
+}
+
+/* Aplica Poppins como fonte padrão do site todo */
+body {
+    font-family: 'Poppins', sans-serif;
 }
