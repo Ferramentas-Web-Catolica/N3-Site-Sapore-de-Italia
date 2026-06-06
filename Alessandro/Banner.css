@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* O container segura a onda de todo mundo */
+.container-Banner {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+
+/* A imagem se adapta perfeitamente ao tamanho da tela */
+.Banner {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- CONFIGURAÇÃO PARA TELA GRANDE (COMPUTADOR) --- */
+.reservar {
+    position: absolute;
+    
+    /* Trava o botão sempre a 55% do topo e 50% da esquerda */
+    top: 55%;                   
+    left: 50%;                  
+    transform: translate(-50%, -50%); 
+
+    /* Estilo visual no PC */
+    color: white;
+    background-color: #6B1F2A;
+    padding: 18px 35px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.4);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.reservar:hover {
+    background-color: #852735;
+    transform: translate(-50%, -50%) scale(1.05); /* Um leve zoom ao passar o mouse */
+}
+
+/* --- DESIGN RESPONSIVO (TELAS MENORES) --- */
+
+/* Para Tablets e telas médias */
+@media (max-width: 992px) {
+    .reservar {
+        top: 55%; /* Continua na mesma altura proporcional */
+        padding: 12px 24px;
+        font-size: 14px;
+        border-radius: 8px;
+    }
+}
+
+/* Para Celulares comuns (como o botão estava sumindo, aqui a gente força ele a diminuir) */
+@media (max-width: 768px) {
+    .reservar {
+        top: 55%; 
+        padding: 8px 16px;
+        font-size: 11px;
+        border-radius: 6px;
+        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Para Celulares bem pequenos */
+@media (max-width: 480px) {
+    .reservar {
+        top: 55%;
+        padding: 6px 12px;
+        font-size: 9px;
+    }
+}

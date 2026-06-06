@@ -1,0 +1,159 @@
+/* ==========================================================================
+   ARQUIVO: Avaliações.css (Sapore D'Italia) - FONTES E COMPONENTES AMPLIADOS
+   ========================================================================== */
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fcf9f5;
+}
+
+/* 1. SEÇÃO DE TELA A TELA (OCUPA 100% DA LARGURA DA TELA) */
+.container-avaliacoes-geral {
+    background-color: #1F4A2E; 
+    padding: 40px 0;           
+    width: 100%;               
+    margin: 40px 0;            
+    box-sizing: border-box;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* 2. CONTAINER DO CARROSSEL HORIZONTAL */
+.carrossel-wrapper {
+    display: flex;             
+    flex-direction: row;
+    flex-wrap: nowrap;         
+    gap: 20px;                 
+    width: 100%;
+    overflow-x: auto;          
+    padding: 10px 40px 25px 40px; 
+    box-sizing: border-box;
+    cursor: grab; 
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.carrossel-wrapper:active,
+.carrossel-wrapper.arrastando {
+    cursor: grabbing; 
+    scroll-behavior: auto;     
+}
+
+/* Estilização da barra de rolagem */
+.carrossel-wrapper::-webkit-scrollbar {
+    height: 6px;
+}
+.carrossel-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(212, 163, 89, 0.4); 
+    border-radius: 10px;
+}
+.carrossel-wrapper::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* 3. O CARD COM AJUSTES DE ESPAÇO PARA FONTES MAIORES */
+.card-testemunho {
+    background-color: #F5E6D3;  
+    border: 2px solid #000000;  
+    border-radius: 25px;        
+    
+    /* ALTERAÇÃO: Diminuímos o padding lateral para 6px para dar mais espaço interno às letras maiores */
+    padding: 25px 6px;         
+    
+    /* TRAVA DA PROPORÇÃO VERTICAL */
+    flex: 0 0 160px;            
+    min-height: 350px;          
+    
+    /* Sombra sólida tridimensional marcante */
+    box-shadow: 5px 5px 0px #000000; 
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;        
+    text-align: center;
+    position: relative;         
+    box-sizing: border-box;
+    overflow: hidden;           
+}
+
+/* Centralização automática em ecres grandes */
+.card-testemunho:first-child {
+    margin-left: auto;
+}
+.card-testemunho:last-child {
+    margin-right: auto;
+}
+
+/* Nome do cliente no topo (AUMENTADO) */
+.nome-cliente {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 21px;            /* Aumentado de 18px para 21px para grande destaque */
+    line-height: 1.1;
+    margin: 0 0 6px 0;
+    font-weight: bold;
+    width: 100%;
+    word-wrap: break-word;      
+}
+
+/* Estrelas avaliativas (AUMENTADAS) */
+.estrelas-video {
+    color: #C9A961;            
+    font-size: 25px;            /* Aumentado de 18px para 21px para preencher a largura */
+    letter-spacing: 1px;        
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+/* O comentário (AUMENTADO) */
+.comentario {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 22px;            /* Aumentado de 13.5px para 16px (Leitura nítida e imponente) */
+    line-height: 1.3;
+    font-weight: 500;
+    
+    margin: 0;
+    width: 100%;
+    flex-grow: 1;               
+    display: flex;
+    align-items: center;        
+    justify-content: center;
+    
+    /* Margem de segurança interna para evitar colisões */
+    padding: 5px 4px 45px 4px; 
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* A data fixada no rodapé (AUMENTADA) */
+.data-avaliacao {
+    position: absolute;
+    bottom: 18px;               
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    font-size: 20px;            /* Aumentado de 13px para 15px */
+    font-weight: 500;
+    width: 100%;
+}
+
+/* 4. AJUSTE RESPONSIVO PARA DISPOSITIVOS MÓVEIS (CELULARES) */
+@media (max-width: 768px) {
+    .container-avaliacoes-geral {
+        margin: 20px 0;
+        padding: 30px 0;
+    }
+    
+    .carrossel-wrapper {
+        padding: 10px 20px 25px 20px; 
+        gap: 15px;
+    }
+
+    .card-testemunho:first-child {
+        margin-left: 0;
+    }
+    .card-testemunho:last-child {
+        margin-right: 0;
+    }
+}
