@@ -3,6 +3,8 @@
 /* CORES PADRÕES NÃO MEXER */
 /* CORES PADRÕES NÃO MEXER */
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 :root {
     --vermelho: #6B1F2A;
     --vermelho-escuro: #4A1218;
@@ -18,4 +20,8 @@
     --preto: #1A1A1A;
     --cinza: #7A7A7A;
     --branco: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
 }

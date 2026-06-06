@@ -1,43 +1,31 @@
 /* Menu Hambúrguer (mobile) */
 
-.hamburguer {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 5px;
-    display: none;
-}
-
-.hamburguer-linha {
-    display: block;
-    width: 28px;
-    height: 3px;
-    background-color: var(--bege);
-    margin: 5px 0;
-}
-
 .menu-mobile {
     display: none;
-    background-color: var(--vermelho-escuro);
+    background-color: var(--bege);
+}
+
+.menu-mobile ul {
     list-style: none;
     margin: 0;
-    padding: 15px 0;
+    padding: 10px 0;
 }
 
 .menu-mobile li {
     text-align: center;
-    padding: 12px 0;
+    padding: 10px 0;
 }
 
 .menu-mobile a {
-    color: var(--bege);
+    color: var(--vermelho);
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
 
 .menu-mobile a:hover {
-    color: var(--dourado);
+    color: var(--vermelho-escuro);
 }
 
 /* Quando o menu está aberto */
@@ -45,9 +33,10 @@
     display: block;
 }
 
-/* Mostrar hambúrguer só no mobile */
-@media (max-width: 768px) {
-    .hamburguer {
-        display: block;
+/* No desktop o menu hambúrguer nunca aparece */
+@media (min-width: 769px) {
+    .menu-mobile,
+    .menu-mobile.aberto {
+        display: none;
     }
 }
