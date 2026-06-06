@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sapore D'Italia</title>
 
-    <!-- BIBLIOTECA (sobe uma pasta) -->
+    <!-- BIBLIOTECA -->
     <link rel="stylesheet" href="../Biblioteca/cores.css">
     <link rel="stylesheet" href="../Biblioteca/botoes.css">
 
-    <!-- COMPONENTES DO NETO (mesma pasta) -->
+    <!-- COMPONENTES DO NETO  -->
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="menu-hamburguer.css">
     <link rel="stylesheet" href="footer.css">
@@ -18,13 +19,16 @@
         body {
             margin: 0;
             background-color: var(--bege-claro);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         main {
+            flex: 1;
             padding: 60px 20px;
             text-align: center;
         }
-
 
         .titulo-pagina {
             color: var(--vermelho);
@@ -36,10 +40,9 @@
             color: var(--cinza);
             margin-bottom: 50px;
         }
-
-
     </style>
 </head>
+
 <body>
 
     <!-- HEADER (componente do Neto) -->
@@ -57,4 +60,5 @@
     <!-- JS do hambúrguer -->
     <script src="menu-hamburguer.js"></script>
 </body>
+
 </html>
