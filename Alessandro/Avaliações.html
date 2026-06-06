@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,116 +9,9 @@
 <body>
 
     <section class="container-avaliacoes-geral">
-        <!-- O container correto que guarda os seus cards -->
-        <div class="carrossel-wrapper">
-            
-            <!-- CARD 1: Mariana Silva -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Mariana Silva</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“comida muito boa, mas poucas opções de vinho”</p>
-                <span class="data-avaliacao">21/12/2025</span>
-            </div>
+        <div class="carrossel-wrapper" id="carrossel-conteudo"></div>
+    </section>
 
-            <!-- CARD 2: Marcos Alex -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Marcos Alex</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“Ambiente agradável e comida impecável.”</p>
-                <span class="data-avaliacao">11/10/2025</span>
-            </div>
-
-            <!-- CARD 3: Sandro Souza -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Sandro Souza</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“Sabor autêntico, parece Itália de verdade.”</p>
-                <span class="data-avaliacao">10/10/2025</span>
-            </div>
-
-            <!-- CARD 4: Henrique Dony -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Henrique Dony</h3>
-                <div class="estrelas-video">★★★☆☆</div>
-                <p class="comentario">“Atendimento ruins e pratos medianos.”</p>
-                <span class="data-avaliacao">21/10/2025</span>
-            </div>
-
-            <!-- CARD 5: Alex Pedro -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Alex Pedro</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“Parmessão e molho impecáveis, voltarei com certeza”</p>
-                <span class="data-avaliacao">01/04/2025</span>
-            </div>
-
-            <!-- CARD 6: José Silva -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">José Silva</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“É um lugar bom, muito romântico.”</p>
-                <span class="data-avaliacao">18/09/2025</span>
-            </div>
-
-            <!-- CARD 7: Maria Clara -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Maria Clara</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“Muito bom, voltarei com certeza”</p>
-                <span class="data-avaliacao">06/05/2025</span>
-            </div>
-
-            <!-- CARD 8: Roberto Abreu -->
-            <div class="card-testemunho">
-                <h3 class="nome-cliente">Roberto Abreu</h3>
-                <div class="estrelas-video">★★★★★</div>
-                <p class="comentario">“O Penne ao Pomodoro é maravilhoso”</p>
-                <span class="data-avaliacao">20/10/2025</span>
-            </div>
-
-        </div>
-    </section> <!-- Apenas um fechamento aqui, sem tags duplicadas -->
-
-    <script>
-        // CORREÇÃO: Agora o JavaScript busca explicitamente pelo '.carrossel-wrapper'
-        const carrossel = document.querySelector('.carrossel-wrapper');
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        // --- 1. ROLAR COM A RODINHA DO MOUSE ---
-        carrossel.addEventListener('wheel', (e) => {
-            if (e.deltaY !== 0) {
-                e.preventDefault();
-                carrossel.scrollLeft += e.deltaY * 1.5; 
-            }
-        });
-
-        // --- 2. CLICAR E ARRASTAR COM A SETA DO MOUSE ---
-        carrossel.addEventListener('mousedown', (e) => {
-            isDown = true;
-            carrossel.classList.add('arrastando');
-            startX = e.pageX - carrossel.offsetLeft;
-            scrollLeft = carrossel.scrollLeft;
-        });
-
-        carrossel.addEventListener('mouseleave', () => {
-            isDown = false;
-            carrossel.classList.remove('arrastando');
-        });
-
-        carrossel.addEventListener('mouseup', () => {
-            isDown = false;
-            carrossel.classList.remove('arrastando');
-        });
-
-        carrossel.addEventListener('mousemove', (e) => {
-            if (!isDown) return; 
-            e.preventDefault();
-            const x = e.pageX - carrossel.offsetLeft;
-            const walk = (x - startX) * 2; 
-            carrossel.scrollLeft = scrollLeft - walk;
-        });
-    </script>
+    <script src="Avaliações.js"></script>
 </body>
 </html>
