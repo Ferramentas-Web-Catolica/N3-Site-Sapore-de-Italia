@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Mesa</title>
+    <link rel="stylesheet" href="reservar.css">
+</head>
+<body>
+
+    <div class="container">
+        <form id="reservaForm" class="reserva-card">
+            <h1>RESERVE SUA MESA</h1>
+
+            <div class="campo">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+            </div>
+
+            <div class="campo">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" required>
+            </div>
+
+            <div class="campo">
+                <label for="dataHora">Data e Horário:</label>
+                <input type="datetime-local" id="dataHora" required>
+            </div>
+
+            <div class="campo">
+                <label for="pessoas">Quantas pessoas:</label>
+                <input type="number" id="pessoas" min="1" required>
+            </div>
+
+            <button type="submit" id="btnReserva">
+                CONFIRMAR RESERVA
+            </button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', 'Arial', sans-serif; /* Fonte limpa e marcante */
+}
+
+body {
+  background-color: #FFFFFF; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif; 
+}
+
+
+.menu-container {
+  background-color: #1F4A2E;
+  width: 100%;
+  max-width: 900px;
+  padding: 30px 40px;
+  border-radius: 24px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+}
+
+
+.menu-title {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 25px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+.menu-options {
+  display: flex;
+  justify-content: center;
+  gap: 30px; 
+  flex-wrap: wrap; 
+}
+
+
+.menu-btn {
+  background-color: #6B1F2A; 
+  color: #FFFFFF;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  padding: 12px 40px;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.menu-btn:hover {
+  background-color: #6B1F2A;
+  transform: translateY(-2px);
+}
+
+
+.menu-btn.active {
+  background-color: #4A1218; 
+  transform: translateY(1px);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5); 
+}

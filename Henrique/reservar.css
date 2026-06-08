@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #1A1A1A;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+}
+
+.reserva-card {
+    background: #F5E6D3;
+    border-radius: 15px;
+    padding: 50px 60px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.4);
+}
+
+.reserva-card h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.campo {
+    margin-bottom: 35px;
+}
+
+.campo label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.campo input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #1A1A1A;
+    background: transparent;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+.campo input:focus {
+    border-bottom-color: #6B1F2A;
+}
+
+button {
+    display: block;
+    margin: 40px auto 0;
+    background:#6B1F2A;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+button:hover {
+    background: #6B1F2A;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .reserva-card {
+        padding: 30px;
+    }
+
+    .reserva-card h1 {
+        font-size: 2rem;
+    }
+
+    .campo label {
+        font-size: 1.1rem;
+    }
+}
+button {
+    display: block;
+    margin: 40px auto 0;
+    background: #6B1F2A;
+    color: #FFFFFF;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: 240px;
+
+    transition:
+        background-color 0.8s ease,
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+button.reservando {
+    transform: scale(0.9);
+    opacity: 0.8;
+}
+
+button.reservado {
+    background-color: #2D5F3F;
+    transform: scale(1.05);
+}
+
+.check {
+    display: inline-block;
+    margin-right: 8px;
+    animation: checkPop .5s ease;
+}
+
+@keyframes checkPop {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+#btnReserva{
+    background:#6B1F2A;
+    transition: all 1s ease;
+}
+
+#btnReserva.reservando{
+    transform: scale(0.85);
+    opacity:.5;
+}
+
+#btnReserva.reservado{
+    background:#2D5F3F;
+    transform: scale(1.1);
+}
