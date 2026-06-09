@@ -1,3 +1,4 @@
+/* Reset global: Zera as margens, espaçamentos e define uma fonte padrão para todos os elementos */
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +6,7 @@
   font-family: 'Montserrat', 'Arial', sans-serif; /* Fonte limpa e marcante */
 }
 
+/* Corpo da página: Define a cor de fundo branca e centraliza o menu na tela usando Flexbox */
 body {
   background-color: #FFFFFF; 
   display: flex;
@@ -15,7 +17,7 @@ body {
   font-family: 'Poppins', sans-serif; 
 }
 
-
+/* Bloco do menu principal: Define o fundo verde, largura máxima, bordas arredondadas e sombra de profundidade */
 .menu-container {
   background-color: #1F4A2E;
   width: 100%;
@@ -26,7 +28,7 @@ body {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
 }
 
-
+/* Título do menu: Estiliza o texto superior em letras brancas, com espaçamento e sombra projetada */
 .menu-title {
   color: #ffffff;
   font-size: 1.6rem;
@@ -36,7 +38,7 @@ body {
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
-
+/* Área que envolve as opções: Alinha e distribui os botões horizontalmente permitindo quebra de linha */
 .menu-options {
   display: flex;
   justify-content: center;
@@ -44,7 +46,7 @@ body {
   flex-wrap: wrap; 
 }
 
-
+/* Estilo padrão dos botões: Define a cor vermelha, formato pílula, sombras e o tempo de transição de efeitos */
 .menu-btn {
   background-color: #6B1F2A; 
   color: #FFFFFF;
@@ -59,13 +61,13 @@ body {
   box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-
+/* Efeito ao passar o mouse no botão: Mantém a cor e faz uma leve subida de posição */
 .menu-btn:hover {
   background-color: #6B1F2A;
   transform: translateY(-2px);
 }
 
-
+/* Estado Ativo/Selecionado: Altera o botão para um tom mais escuro, move para baixo e aplica sombra interna de pressionado */
 .menu-btn.active {
   background-color: #4A1218; 
   transform: translateY(1px);

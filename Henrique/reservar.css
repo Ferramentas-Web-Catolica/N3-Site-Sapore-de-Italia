@@ -1,3 +1,4 @@
+/* Reset global: Zera margens, espaçamentos e define a fonte para todo o documento */
 * {
     margin: 0;
     padding: 0;
@@ -5,6 +6,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+/* Corpo da página: Define o fundo escuro e centraliza o conteúdo na tela */
 body {
     background: #1A1A1A;
     min-height: 100vh;
@@ -14,11 +16,13 @@ body {
     padding: 30px;
 }
 
+/* Contêiner principal: Limita a largura máxima da área de conteúdo */
 .container {
     width: 100%;
     max-width: 1000px;
 }
 
+/* Card de Reserva: Caixa bege com cantos arredondados e sombra de fundo */
 .reserva-card {
     background: #F5E6D3;
     border-radius: 15px;
@@ -26,6 +30,7 @@ body {
     box-shadow: 0 5px 15px rgba(0,0,0,.4);
 }
 
+/* Título principal do Card: Estiliza o h1 centralizado e sublinhado */
 .reserva-card h1 {
     text-align: center;
     font-size: 3rem;
@@ -34,10 +39,12 @@ body {
     font-weight: bold;
 }
 
+/* Bloco do campo: Define o espaçamento inferior de cada seção do formulário */
 .campo {
     margin-bottom: 35px;
 }
 
+/* Rótulo do campo (Texto de instrução acima do input) */
 .campo label {
     display: block;
     font-size: 1.5rem;
@@ -45,6 +52,7 @@ body {
     font-weight: 500;
 }
 
+/* Campo de entrada de texto (Linha inferior no estilo minimalista) */
 .campo input {
     width: 100%;
     border: none;
@@ -55,10 +63,12 @@ body {
     outline: none;
 }
 
+/* Foco no campo: Altera a cor da linha inferior quando o usuário clica para digitar */
 .campo input:focus {
     border-bottom-color: #6B1F2A;
 }
 
+/* Estilo geral do botão: Define o design padrão (cor vermelha, tamanho, cursor) */
 button {
     display: block;
     margin: 40px auto 0;
@@ -73,11 +83,13 @@ button {
     transition: .3s;
 }
 
+/* Efeito de passar o mouse no botão: Leve subida de posição */
 button:hover {
     background: #6B1F2A;
     transform: translateY(-2px);
 }
 
+/* Responsividade (Media Query): Ajusta tamanhos e espaçamentos em telas de até 768px (Mobile/Tablet) */
 @media (max-width: 768px) {
     .reserva-card {
         padding: 30px;
@@ -91,6 +103,8 @@ button:hover {
         font-size: 1.1rem;
     }
 }
+
+/* Bloco duplicado/sobrescrito do botão: Ajusta o arredondamento, largura mínima e transições mais lentas */
 button {
     display: block;
     margin: 40px auto 0;
@@ -110,22 +124,26 @@ button {
         opacity 0.3s ease;
 }
 
+/* Botão no estado de carregamento/processamento da reserva (Diminui e fica semi-transparente) */
 button.reservando {
     transform: scale(0.9);
     opacity: 0.8;
 }
 
+/* Botão no estado de sucesso da reserva (Muda para verde e cresce levemente) */
 button.reservado {
     background-color: #2D5F3F;
     transform: scale(1.05);
 }
 
+/* Elemento de confirmação (ícone de check): Espaçamento lateral e ativação da animação pop */
 .check {
     display: inline-block;
     margin-right: 8px;
     animation: checkPop .5s ease;
 }
 
+/* Animação do ícone de confirmação: Efeito de surgir crescendo de tamanho repentinamente */
 @keyframes checkPop {
     0% {
         transform: scale(0);
@@ -141,16 +159,20 @@ button.reservado {
         opacity: 1;
     }
 }
+
+/* Estilo específico do botão por ID: Define a cor vermelha e tempo de transição de 1 segundo */
 #btnReserva{
     background:#6B1F2A;
     transition: all 1s ease;
 }
 
+/* Botão específico ID no estado de processamento: Encolhe mais e reduz a opacidade pela metade */
 #btnReserva.reservando{
     transform: scale(0.85);
     opacity:.5;
 }
 
+/* Botão específico ID no estado de sucesso: Altera para o tom verde correto e expande */
 #btnReserva.reservado{
     background:#2D5F3F;
     transform: scale(1.1);
