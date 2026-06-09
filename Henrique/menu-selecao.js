@@ -1,3 +1,4 @@
+
 /* Aguarda o carregamento completo do HTML (DOM) para iniciar a execução do script com segurança */
 document.addEventListener("DOMContentLoaded", () => {
   /* Procura e armazena todos os botões que possuem a classe '.menu-btn' em uma lista */
