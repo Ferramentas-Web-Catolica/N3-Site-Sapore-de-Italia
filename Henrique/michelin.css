@@ -1,0 +1,61 @@
+/* Estilo do Card Principal (Verde) */
+.michelin-card {
+  background-color: #1F4A2E; /* O mesmo verde escuro do menu */
+  width: 100%;
+  max-width: 850px;          /* Limita a largura máxima como no Figma */
+  padding: 40px 20px;
+  border-radius: 24px;       /* Bordas arredondadas idênticas */
+  text-align: center;
+  
+  /* Flexbox para alinhar tudo verticalmente no centro */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;                 /* Espaçamento padrão entre os elementos */
+  
+  /* Sombra suave projetada para baixo do card */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  margin: 20px auto;         /* Centraliza o card na tela */
+}
+
+/* Container das Estrelas */
+.michelin-stars {
+  display: flex;
+  justify-content: center;
+  gap: 12px;                 /* Espaço entre uma estrela e outra */
+  margin-bottom: 8px;
+}
+
+/* Ícones das Estrelas (Amarelas) */
+.star-icon {
+  width: 180.37px;               /* Tamanho de destaque das estrelas */
+  height: 150.95px;
+  color: #C9A961;            /* Tom de dourado/amarelo do Figma */
+  
+  /* Sombra projetada recortada no formato exato da estrela */
+  filter: drop-shadow(0px 4px 5px rgba(0, 0, 0, 0.4));
+}
+
+/* Título menor (Amarelo/Dourado) */
+.michelin-subtitle {
+  color: #C9A961;
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  
+  /* Sombra leve no texto para destacar do fundo */
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Descrição de baixo (Branca) */
+.michelin-text {
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  opacity: 0.95;             /* Suaviza o branco puro */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
