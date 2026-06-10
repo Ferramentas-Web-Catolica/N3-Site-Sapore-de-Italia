@@ -2,19 +2,19 @@
 // Como usar nas paginas:
 //   <link rel="stylesheet" href="Avaliacoes.css">
 //   <script src="Avaliacoes.js"></script>
-
+ 
 (function () {
     var script = document.currentScript;
-
-    // 1. HTML do componente (estrutura do carrossel)
+ 
+    // HTML do componente (estrutura do carrossel)
     var html = `
         <section class="container-avaliacoes-geral">
             <div class="carrossel-wrapper" id="carrossel-conteudo"></div>
         </section>
     `;
     script.insertAdjacentHTML('beforebegin', html);
-
-    // 2. Dados das avaliacoes
+ 
+    // Dados das avaliacoes
     var avaliacoesData = [
         { nome: "Mariana Silva",  estrelas: "★★★★★", comentario: "“comida muito boa, mas poucas opções de vinho”",            data: "21/12/2025" },
         { nome: "Marcos Alex",    estrelas: "★★★★★", comentario: "“Ambiente agradável e comida impecável.”",                  data: "11/10/2025" },
@@ -25,8 +25,8 @@
         { nome: "Maria Clara",    estrelas: "★★★★★", comentario: "“Muito bom, voltarei com certeza”",                         data: "06/05/2025" },
         { nome: "Roberto Abreu",  estrelas: "★★★★★", comentario: "“O Penne ao Pomodoro é maravilhoso”",                       data: "20/10/2025" }
     ];
-
-    // 3. Constroi e exibe os cards
+ 
+    // Constroi e exibe os cards
     var container = document.getElementById('carrossel-conteudo');
     avaliacoesData.forEach(function (item) {
         var card = document.createElement('div');
@@ -39,12 +39,12 @@
         `;
         container.appendChild(card);
     });
-
-    // 4. Interacoes de arraste e rolagem
+ 
+    // Interacoes de arraste e rolagem
     var isDown = false;
     var startX = 0;
     var scrollLeft = 0;
-
+ 
     // Rolar com a rodinha do mouse
     container.addEventListener('wheel', function (e) {
         if (e.deltaY !== 0) {
@@ -52,7 +52,7 @@
             container.scrollLeft += e.deltaY * 1.5;
         }
     });
-
+ 
     // Clicar e arrastar
     container.addEventListener('mousedown', function (e) {
         isDown = true;
@@ -60,17 +60,17 @@
         startX = e.pageX - container.offsetLeft;
         scrollLeft = container.scrollLeft;
     });
-
+ 
     container.addEventListener('mouseleave', function () {
         isDown = false;
         container.classList.remove('arrastando');
     });
-
+ 
     container.addEventListener('mouseup', function () {
         isDown = false;
         container.classList.remove('arrastando');
     });
-
+ 
     container.addEventListener('mousemove', function (e) {
         if (!isDown) return;
         e.preventDefault();

@@ -1,179 +1,65 @@
-/* Reset global: Zera margens, espaçamentos e define a fonte para todo o documento */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-/* Corpo da página: Define o fundo escuro e centraliza o conteúdo na tela */
+/* Configuração básica para a fonte e fundo da página */
 body {
-    background: #1A1A1A;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
+  background-color: #1e1e1e; 
+  font-family: 'Poppins', sans-serif; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
-/* Contêiner principal: Limita a largura máxima da área de conteúdo */
-.container {
-    width: 100%;
-    max-width: 1000px;
+/* Componente Principal */
+.card-reserva {
+  background-color: #244636; 
+  border-radius: 20px;     
+  padding: 30px 40px;
+  width: 100%;
+  max-width: 650px;      
+  text-align: center;
+  
+  /* alinhar os itens verticalmente */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;                 /* Espaçamento entre o texto e o botão */
+  
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Card de Reserva: Caixa bege com cantos arredondados e sombra de fundo */
-.reserva-card {
-    background: #F5E6D3;
-    border-radius: 15px;
-    padding: 50px 60px;
-    box-shadow: 0 5px 15px rgba(0,0,0,.4);
+/* Texto de chamada */
+.texto-chamada {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 1px;       /* Espaçamento entre as letras */
+  margin: 0;
 }
 
-/* Título principal do Card: Estiliza o h1 centralizado e sublinhado */
-.reserva-card h1 {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 40px;
-    text-decoration: underline;
-    font-weight: bold;
+/* Botão Reservar */
+.botao-reservar {
+  background-color: #8b2630; /* Vermelho escuro do botão */
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  
+  border: none;
+  border-radius: 12px;       
+  padding: 12px 35px;
+  cursor: pointer;
+  
+  /* Sombra do botão */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Bloco do campo: Define o espaçamento inferior de cada seção do formulário */
-.campo {
-    margin-bottom: 35px;
+/* Efeito ao passar o mouse (Hover) */
+.botao-reservar:hover {
+  background-color: #a02d39; /* Tom de vermelho levemente mais claro */
 }
 
-/* Rótulo do campo (Texto de instrução acima do input) */
-.campo label {
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    font-weight: 500;
-}
-
-/* Campo de entrada de texto (Linha inferior no estilo minimalista) */
-.campo input {
-    width: 100%;
-    border: none;
-    border-bottom: 2px solid #1A1A1A;
-    background: transparent;
-    padding: 10px 0;
-    font-size: 1.1rem;
-    outline: none;
-}
-
-/* Foco no campo: Altera a cor da linha inferior quando o usuário clica para digitar */
-.campo input:focus {
-    border-bottom-color: #6B1F2A;
-}
-
-/* Estilo geral do botão: Define o design padrão (cor vermelha, tamanho, cursor) */
-button {
-    display: block;
-    margin: 40px auto 0;
-    background:#6B1F2A;
-    color: #FFFFFF;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: .3s;
-}
-
-/* Efeito de passar o mouse no botão: Leve subida de posição */
-button:hover {
-    background: #6B1F2A;
-    transform: translateY(-2px);
-}
-
-/* Responsividade (Media Query): Ajusta tamanhos e espaçamentos em telas de até 768px (Mobile/Tablet) */
-@media (max-width: 768px) {
-    .reserva-card {
-        padding: 30px;
-    }
-
-    .reserva-card h1 {
-        font-size: 2rem;
-    }
-
-    .campo label {
-        font-size: 1.1rem;
-    }
-}
-
-/* Bloco duplicado/sobrescrito do botão: Ajusta o arredondamento, largura mínima e transições mais lentas */
-button {
-    display: block;
-    margin: 40px auto 0;
-    background: #6B1F2A;
-    color: #FFFFFF;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-    min-width: 240px;
-
-    transition:
-        background-color 0.8s ease,
-        transform 0.3s ease,
-        opacity 0.3s ease;
-}
-
-/* Botão no estado de carregamento/processamento da reserva (Diminui e fica semi-transparente) */
-button.reservando {
-    transform: scale(0.9);
-    opacity: 0.8;
-}
-
-/* Botão no estado de sucesso da reserva (Muda para verde e cresce levemente) */
-button.reservado {
-    background-color: #2D5F3F;
-    transform: scale(1.05);
-}
-
-/* Elemento de confirmação (ícone de check): Espaçamento lateral e ativação da animação pop */
-.check {
-    display: inline-block;
-    margin-right: 8px;
-    animation: checkPop .5s ease;
-}
-
-/* Animação do ícone de confirmação: Efeito de surgir crescendo de tamanho repentinamente */
-@keyframes checkPop {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    70% {
-        transform: scale(1.4);
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Estilo específico do botão por ID: Define a cor vermelha e tempo de transição de 1 segundo */
-#btnReserva{
-    background:#6B1F2A;
-    transition: all 1s ease;
-}
-
-/* Botão específico ID no estado de processamento: Encolhe mais e reduz a opacidade pela metade */
-#btnReserva.reservando{
-    transform: scale(0.85);
-    opacity:.5;
-}
-
-/* Botão específico ID no estado de sucesso: Altera para o tom verde correto e expande */
-#btnReserva.reservado{
-    background:#2D5F3F;
-    transform: scale(1.1);
+/* Efeito ao clicar (Active) */
+.botao-reservar:active {
+  transform: scale(0.98);    /* Sutil efeito de clique */
 }
