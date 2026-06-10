@@ -1,9 +1,12 @@
+// Array que armazena todos os pratos da categoria Entradas
 const entradas = [
+
+    // Cada objeto representa um prato
     {
-        nome: "Bruschetta al Pomodoro",
-        descricao: "Pão italiano tostado, tomates frescos, alho, manjericão e azeite extra virgem.",
-        preco: "R$ 56,30",
-        imagem: "./img/Entradas/Bruschetta.jpg"
+        nome: "Bruschetta al Pomodoro", 
+        descricao: "Pão italiano tostado, tomates frescos, alho, manjericão e azeite extra virgem.", 
+        preco: "R$ 56,30", 
+        imagem: "./img/Entradas/Bruschetta.jpg" 
     },
     {
         nome: "Focaccia com Alecrim",
@@ -37,25 +40,32 @@ const entradas = [
     }
 ];
 
+// Procura no HTML o elemento com id="lista-entradas"
 const lista = document.getElementById("lista-entradas");
 
+// Percorre todos os itens do array entradas
 entradas.forEach(item => {
-
+    // Cria uma nova div para representar um card
     const card = document.createElement("div");
+    // Adiciona a classe "card" para aplicar o CSS correspondente
     card.className = "card";
-
+    // Insere o conteúdo HTML dentro da div criada
     card.innerHTML = `
+        <!-- Imagem do prato -->
         <img class="imagem-prato" src="${item.imagem}" alt="${item.nome}">
 
+        <!-- Área de informações -->
         <div class="info">
+            <!-- Nome do prato -->
             <h2>${item.nome}</h2>
+            <!-- Descrição do prato -->
             <p>${item.descricao}</p>
         </div>
-
+        <!-- Área do preço -->
         <div class="preco">
             ${item.preco}
         </div>
     `;
-
+    // Adiciona o card criado dentro do container principal
     lista.appendChild(card);
 });
