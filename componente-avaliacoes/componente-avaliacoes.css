@@ -1,0 +1,139 @@
+/* Avaliacoes - caixa verde com carrossel de depoimentos */
+
+.container-avaliacoes {
+    background-color: var(--verde-escuro);
+    max-width: var(--largura-conteudo);  /* mesma largura dos outros componentes */
+    margin: var(--espaco-secao) auto;
+    padding: 30px 0;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+/* Linha rolável que segura os cards */
+.carrossel-avaliacoes {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;                    /* rola de lado */
+    padding: 10px 30px 20px;
+    box-sizing: border-box;
+    cursor: grab;                        /* mãozinha de "pode arrastar" */
+    scrollbar-width: none;               /* esconde a barra no Firefox */
+}
+
+/* Esconde a barra de rolagem feia no Chrome/Edge */
+.carrossel-avaliacoes::-webkit-scrollbar {
+    display: none;
+}
+
+/* Enquanto está arrastando, muda o cursor */
+.carrossel-avaliacoes.puxando {
+    cursor: grabbing;
+}
+
+/* Dica de "arraste para o lado" embaixo do carrossel */
+.aval-dica {
+    text-align: center;
+    color: var(--bege);
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin: 4px 0 0;
+    opacity: 0.8;
+}
+
+/* Centraliza os cards quando eles não preenchem a largura toda */
+.card-avaliacao:first-child {
+    margin-left: auto;
+}
+.card-avaliacao:last-child {
+    margin-right: auto;
+}
+
+/* Card individual de avaliação */
+.card-avaliacao {
+    background-color: var(--bege);
+    border: 2px solid var(--preto);
+    border-radius: 25px;
+    padding: 25px 10px;
+    flex: 0 0 170px;                     /* largura fixa de cada card */
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;                  /* base pra fixar a data embaixo */
+    box-sizing: border-box;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* Efeito ao passar o mouse no card */
+.card-avaliacao:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+}
+
+.nome-cliente {
+    color: var(--preto);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 6px;
+    line-height: 1.1;
+    min-height: 2.4em;                   /* reserva espaço pra até 2 linhas */
+    display: flex;                       /* centraliza o nome nesse espaço fixo */
+    align-items: center;
+    justify-content: center;
+}
+
+.estrelas {
+    color: var(--dourado);
+    font-size: 22px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.comentario {
+    color: var(--preto);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.3;
+    flex-grow: 1;                        /* empurra a data pro fim do card */
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-bottom: 30px;
+}
+
+.data-avaliacao {
+    position: absolute;                  /* fixa no rodapé do card */
+    bottom: 18px;
+    color: var(--preto);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* ======== MOBILE (até 768px) ======== */
+@media (max-width: 768px) {
+    .container-avaliacoes {
+        margin: 20px 15px;
+    }
+
+    .carrossel-avaliacoes {
+        padding: 10px 15px 18px;
+        gap: 10px;
+        scroll-snap-type: x mandatory;   /* ao arrastar, encaixa em cards inteiros */
+    }
+
+    /* Mostra 3 cards inteiros por vez (encolhem pra caber, sem cortar) */
+    .card-avaliacao {
+        flex: 0 0 calc(33.3% - 8px);
+        scroll-snap-align: start;
+        min-height: 240px;
+        padding: 16px 6px;
+        border-radius: 16px;
+    }
+
+    /* Fontes menores pra caber bem nos cards estreitos */
+    .nome-cliente { font-size: 14px; }
+    .estrelas { font-size: 14px; margin-bottom: 6px; }
+    .comentario { font-size: 12px; padding-bottom: 22px; }
+    .data-avaliacao { font-size: 11px; bottom: 12px; }
+}

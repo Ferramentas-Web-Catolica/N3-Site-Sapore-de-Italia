@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../componente-header/logosapore.png">
+    <title>Reserva - Sapore D'Italia</title>
+
+    <!-- Biblioteca compartilhada -->
+    <link rel="stylesheet" href="../Biblioteca/cores.css">
+    <link rel="stylesheet" href="../Biblioteca/botoes.css">
+
+    <!-- CSS dos componentes usados nesta página -->
+    <link rel="stylesheet" href="../componente-header/componente-header.css">
+    <link rel="stylesheet" href="../componente-menu-hamburguer/componente-menu-hamburguer.css">
+    <link rel="stylesheet" href="../componente-reserva/componente-reserva.css">
+    <link rel="stylesheet" href="../componente-frase-reservar/componente-frase-reservar.css">
+    <link rel="stylesheet" href="../componente-selecao-menu/componente-selecao-menu.css">
+    <link rel="stylesheet" href="../componente-footer/componente-footer.css">
+
+    <style>
+        body {
+            margin: 0;
+            background-color: var(--bege-claro);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <script src="../componente-header/componente-header.js"></script>
+
+    <main>
+        <!-- FORMULÁRIO DE RESERVA -->
+        <script src="../componente-reserva/componente-reserva.js"></script>
+
+        <!-- FRASE DE INCENTIVO -->
+        <script src="../componente-frase-reservar/componente-frase-reservar.js"></script>
+
+        <!-- BOTÕES DE CATEGORIA (levam às páginas do menu) -->
+        <script src="../componente-selecao-menu/componente-selecao-menu.js"></script>
+    </main>
+
+    <!-- FOOTER -->
+    <script src="../componente-footer/componente-footer.js"></script>
+
+    <!-- JS do menu hambúrguer -->
+    <script src="../componente-menu-hamburguer/componente-menu-hamburguer.js"></script>
+</body>
+</html>

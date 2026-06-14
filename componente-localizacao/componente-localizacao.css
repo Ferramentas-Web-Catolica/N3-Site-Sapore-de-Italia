@@ -1,0 +1,66 @@
+/* Localização - caixa com endereço, mapa e horário */
+
+.localizacao {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.localizacao-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+/* Ícones SVG (pino e relógio) */
+.localizacao-icone {
+    width: 24px;
+    height: 24px;
+    color: var(--branco);                /* o currentColor do SVG pega essa cor */
+    margin-bottom: 8px;
+}
+
+.localizacao-endereco {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0 15px;
+}
+
+/* Moldura do mapa (corta as bordas arredondadas) */
+.localizacao-mapa {
+    width: 100%;
+    height: 280px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.localizacao-mapa iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+}
+
+.localizacao-subtitulo {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 0 8px;
+}
+
+.localizacao-horario {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .localizacao {
+        margin: 20px 15px;
+    }
+}

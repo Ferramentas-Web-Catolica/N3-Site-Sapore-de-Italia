@@ -20,6 +20,20 @@
     --preto: #1A1A1A;
     --cinza: #7A7A7A;
     --branco: #FFFFFF;
+
+    /* Largura padrão do conteúdo — alinha todos os componentes numa coluna só.
+       Mude aqui pra ajustar a largura do site inteiro de uma vez. */
+    --largura-conteudo: 800px;
+
+    /* Espaço vertical padrão entre os componentes (mesma distância pra todos) */
+    --espaco-secao: 48px;
+}
+
+/* Reset: a largura/altura passam a INCLUIR o padding e a borda.
+   Sem isso, componentes com a mesma max-width mas paddings diferentes
+   acabam com larguras finais diferentes. Com isso, todos ficam iguais. */
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /* Aplica Poppins como fonte padrão do site todo */

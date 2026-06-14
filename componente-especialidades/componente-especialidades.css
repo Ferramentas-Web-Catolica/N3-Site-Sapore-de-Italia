@@ -1,0 +1,91 @@
+/* Especialidades - painel vinho com os pratos em destaque */
+
+.container-especialidades {
+    background-color: var(--vermelho);
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;
+    padding: 35px 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.titulo-especialidades {
+    color: var(--branco);
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* Grade dos cards (desktop): sempre 3 colunas iguais */
+.grid-especialidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Cada card (foto + nome) */
+.card-especialidade {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Moldura arredondada ao redor da foto (sem borda preta) */
+.moldura-img {
+    width: 100%;
+    aspect-ratio: 3 / 4;                 /* formato retrato (foto mais alta) */
+    border-radius: 14px;
+    overflow: hidden;                    /* corta a foto no formato da moldura */
+    margin-bottom: 30px;                 /* mesmo espaço que o título tem embaixo */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* A foto preenche a moldura sem distorcer */
+.moldura-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;          /* zoom suave no hover */
+}
+
+/* Aproxima a foto ao passar o mouse no card */
+.card-especialidade:hover .moldura-img img {
+    transform: scale(1.08);
+}
+
+/* Nome do prato embaixo da foto */
+.card-especialidade h3 {
+    color: var(--branco);
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ======== MOBILE (até 768px): vira carrossel horizontal ======== */
+@media (max-width: 768px) {
+    .container-especialidades {
+        margin: 20px 15px;
+        padding: 30px 15px;
+    }
+
+    .titulo-especialidades {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    /* Mantém as 3 fotos lado a lado (encolhem pra caber inteiras, sem rolagem) */
+    .grid-especialidades {
+        gap: 10px;
+    }
+
+    /* Espaço menor entre a foto e o nome no mobile */
+    .moldura-img {
+        margin-bottom: 12px;
+    }
+
+    .card-especialidade h3 {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,72 @@
+/* Michelin - card verde da experiência Michelin */
+
+.michelin-card {
+    background-color: var(--verde-escuro);
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;    /* mesma distância dos outros */
+    padding: 40px 20px;
+    border-radius: 24px;
+    text-align: center;
+
+    /* Flexbox pra empilhar e centralizar o conteúdo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Container das estrelas */
+.michelin-stars {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+/* Cada estrela */
+.star-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.2s;
+}
+
+/* Estrelas crescem um pouco ao passar o mouse */
+.michelin-stars:hover .star-icon {
+    transform: scale(1.1);
+}
+
+/* Título dourado */
+.michelin-subtitle {
+    color: var(--dourado);
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 0;
+}
+
+/* Descrição branca */
+.michelin-text {
+    color: var(--branco);
+    font-size: 16px;
+    margin: 0;
+}
+
+/* ======== MOBILE (até 768px) ======== */
+@media (max-width: 768px) {
+    .michelin-card {
+        margin: 20px 15px;
+        padding: 30px 15px;
+    }
+
+    .star-icon {
+        width: 45px;
+        height: 45px;
+    }
+
+    .michelin-subtitle {
+        font-size: 18px;
+    }
+
+    .michelin-text {
+        font-size: 14px;
+    }
+}

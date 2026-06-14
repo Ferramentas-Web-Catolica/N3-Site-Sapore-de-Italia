@@ -1,0 +1,92 @@
+/* Reserva - formulário "Reserve sua mesa" */
+
+.reserva {
+    margin: var(--espaco-secao) auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;             /* centraliza o card na página */
+}
+
+/* Card bege do formulário */
+.reserva-form {
+    background-color: var(--bege);
+    width: 100%;
+    max-width: var(--largura-conteudo);
+    padding: 40px;
+    border: 1px solid var(--cinza);   /* borda fininha em volta do card */
+    border-radius: 16px;
+
+    /* empilha os campos um embaixo do outro */
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.reserva-titulo {
+    color: var(--vermelho);
+    text-align: center;
+    font-size: 26px;
+    margin: 0 0 10px;
+}
+
+/* Cada label segura o texto + o input embaixo */
+.reserva-form label {
+    display: flex;
+    flex-direction: column;
+    color: var(--preto);
+    font-size: 14px;
+    gap: 6px;
+}
+
+/* Campos com só a linha de baixo (estilo do Figma) */
+.reserva-form input {
+    border: none;
+    border-bottom: 1px solid var(--cinza);
+    background-color: transparent;
+    padding: 8px 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+}
+
+/* Realça a linha quando o campo está em foco */
+.reserva-form input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--vermelho);
+}
+
+/* Botão de confirmar */
+.reserva-botao {
+    align-self: center;
+    background-color: var(--vermelho);
+    color: var(--branco);
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 12px 30px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.15s, background-color 0.2s;
+}
+
+.reserva-botao:hover {
+    background-color: var(--vermelho-escuro);
+    transform: translateY(-2px);
+}
+
+/* Mensagem de sucesso (verde) */
+.reserva-sucesso {
+    color: var(--verde);
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .reserva-form {
+        padding: 25px;
+    }
+}

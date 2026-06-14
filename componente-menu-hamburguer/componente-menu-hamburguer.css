@@ -1,0 +1,43 @@
+/* Menu Hambúrguer - dropdown que abre no mobile */
+
+.menu-mobile {
+    display: none;                       /* escondido por padrão */
+    background-color: var(--bege);       /* fundo bege */
+}
+
+.menu-mobile ul {
+    list-style: none;                    /* tira as bolinhas */
+    margin: 0;
+    padding: 10px 0;
+}
+
+.menu-mobile li {
+    text-align: center;                  /* centraliza o texto */
+    padding: 10px 0;
+}
+
+.menu-mobile a {
+    color: var(--vermelho);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.menu-mobile a:hover {
+    color: var(--vermelho-escuro);
+}
+
+/* Classe aplicada pelo JS quando clica no hambúrguer */
+.menu-mobile.aberto {
+    display: block;                      /* mostra o menu */
+}
+
+/* ======== DESKTOP (a partir de 769px) ======== */
+@media (min-width: 769px) {
+    /* No desktop o menu mobile nunca aparece (mesmo com a classe "aberto") */
+    .menu-mobile,
+    .menu-mobile.aberto {
+        display: none;
+    }
+}

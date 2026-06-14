@@ -1,0 +1,54 @@
+/* Reservar - card verde de chamada pra reserva */
+
+.cta-reserva {
+    background-color: var(--verde);
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+
+    /* empilha o texto e o botão centralizados */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.cta-texto {
+    color: var(--branco);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.cta-botao {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    padding: 12px 35px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    transition: transform 0.15s, background-color 0.2s;
+}
+
+.cta-botao:hover {
+    background-color: var(--vermelho-escuro);
+    transform: translateY(-2px);
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .cta-reserva {
+        margin: 20px 15px;
+        padding: 25px 20px;
+    }
+
+    .cta-texto {
+        font-size: 16px;
+    }
+}

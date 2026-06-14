@@ -1,0 +1,23 @@
+/* Frase Reservar - texto de incentivo (só o texto, sem caixa) */
+
+.frase-reservar {
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.frase-reservar p {
+    color: var(--preto);
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .frase-reservar p {
+        font-size: 18px;
+    }
+}

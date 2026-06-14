@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <!-- Faz o site se adaptar ao tamanho da tela -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../componente-header/logosapore.png">
+    <title>Sapore D'Italia</title>
+
+    <!-- Biblioteca compartilhada -->
+    <link rel="stylesheet" href="../Biblioteca/cores.css">
+    <link rel="stylesheet" href="../Biblioteca/botoes.css">
+
+    <!-- CSS dos componentes usados nesta página -->
+    <link rel="stylesheet" href="../componente-header/componente-header.css">
+    <link rel="stylesheet" href="../componente-menu-hamburguer/componente-menu-hamburguer.css">
+    <link rel="stylesheet" href="../componente-banner/componente-banner.css">
+    <link rel="stylesheet" href="../componente-michelin/componente-michelin.css">
+    <link rel="stylesheet" href="../componente-especialidades/componente-especialidades.css">
+    <link rel="stylesheet" href="../componente-avaliacoes/componente-avaliacoes.css">
+    <link rel="stylesheet" href="../componente-reservar/componente-reservar.css">
+    <link rel="stylesheet" href="../componente-footer/componente-footer.css">
+
+    <style>
+        /* Layout da página: footer sempre colado no fim da tela */
+        body {
+            margin: 0;
+            background-color: var(--bege-claro);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;     /* empilha header > main > footer */
+        }
+
+        /* main estica e empurra o footer pra base da tela */
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <script src="../componente-header/componente-header.js"></script>
+
+    <main>
+        <!-- BANNER -->
+        <script src="../componente-banner/componente-banner.js"></script>
+
+        <!-- EXPERIÊNCIA MICHELIN -->
+        <script src="../componente-michelin/componente-michelin.js"></script>
+
+        <!-- ESPECIALIDADES -->
+        <script src="../componente-especialidades/componente-especialidades.js"></script>
+
+        <!-- AVALIAÇÕES -->
+        <script src="../componente-avaliacoes/componente-avaliacoes.js"></script>
+
+        <!-- CHAMADA PRA RESERVA -->
+        <script src="../componente-reservar/componente-reservar.js"></script>
+    </main>
+
+    <!-- FOOTER -->
+    <script src="../componente-footer/componente-footer.js"></script>
+
+    <!-- JS do menu hambúrguer (define a função abrirMenu) -->
+    <script src="../componente-menu-hamburguer/componente-menu-hamburguer.js"></script>
+</body>
+</html>

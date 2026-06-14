@@ -1,0 +1,78 @@
+/* Seleção Menu - faixa verde com os botões de categoria */
+
+.menu-selecao {
+    background-color: var(--verde-escuro);
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;
+    padding: 30px 40px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.menu-selecao-titulo {
+    color: var(--branco);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin: 0 0 25px;
+}
+
+/* Área dos botões (quebra linha no mobile) */
+.menu-selecao-botoes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Botão de categoria (formato pílula). É um link <a>, por isso tira o sublinhado */
+.menu-btn {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 12px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.15s, background-color 0.2s;
+}
+
+/* Sobe um pouco no hover */
+.menu-btn:hover {
+    background-color: var(--vermelho-escuro);
+    transform: translateY(-2px);
+}
+
+/* Botão selecionado fica mais escuro */
+.menu-btn.active {
+    background-color: var(--vermelho-escuro);
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .menu-selecao {
+        margin: 20px 15px;
+        padding: 25px 15px;
+    }
+
+    .menu-selecao-titulo {
+        font-size: 18px;
+    }
+
+    /* 4 botões lado a lado, dividindo a largura igualmente */
+    .menu-selecao-botoes {
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
+    .menu-btn {
+        flex: 1;                 /* todos com a mesma largura */
+        padding: 10px 4px;
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+}

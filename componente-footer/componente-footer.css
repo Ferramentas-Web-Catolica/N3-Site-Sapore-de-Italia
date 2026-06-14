@@ -1,0 +1,86 @@
+/* Footer - rodapé do site */
+
+.footer {
+    background-color: var(--vermelho);
+    color: var(--branco);
+    padding: 30px 30px 15px;             /* 30px cima, 30px lados, 15px baixo */
+    text-align: center;
+}
+
+/* Container que segura as 3 colunas */
+.footer-container {
+    display: flex;                       /* colunas lado a lado */
+    justify-content: space-around;       /* distribui o espaço entre elas */
+    align-items: flex-start;             /* alinha no topo */
+    gap: 15px;
+    max-width: var(--largura-conteudo);  /* mesma largura dos outros componentes */
+    margin: 0 auto;                      /* centraliza na barra */
+}
+
+/* Cada coluna (Localização, Siga-nos, Funcionamento) */
+.footer-item {
+    flex: 1;                             /* todas com mesma largura */
+}
+
+/* Ícones SVG do topo de cada coluna */
+.footer-icon {
+    width: 26px;
+    height: 26px;
+    color: var(--branco);                /* o currentColor do SVG pega essa cor */
+}
+
+/* Título de cada coluna */
+.footer-item h3 {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    margin: 8px 0 6px;
+    font-weight: bold;
+}
+
+/* Texto de cada coluna */
+.footer-item p {
+    font-size: 13px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Linha de copyright (parte de baixo) */
+.footer-copy {
+    margin: 25px 0 0;
+    padding-top: 12px;
+    border-top: 1px solid var(--branco); /* linha separadora em cima */
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .footer {
+        padding: 20px 12px 12px;
+    }
+
+    .footer-container {
+        gap: 8px;
+    }
+
+    .footer-icon {
+        width: 20px;
+        height: 20px;
+    }
+
+    .footer-item h3 {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+        margin: 6px 0 4px;
+    }
+
+    .footer-item p {
+        font-size: 10px;
+        line-height: 1.3;
+    }
+
+    .footer-copy {
+        font-size: 9px;
+        margin-top: 18px;
+    }
+}

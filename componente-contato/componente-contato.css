@@ -1,0 +1,63 @@
+/* Contato - caixa de redes sociais */
+
+.contato {
+    background-color: var(--vermelho);
+    max-width: var(--largura-conteudo);
+    margin: var(--espaco-secao) auto;
+    padding: 35px 30px;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.contato-titulo {
+    color: var(--branco);
+    font-size: 22px;
+    font-weight: 500;
+    margin: 0 0 25px;
+}
+
+/* Linha com os 3 ícones (agrupados no centro) */
+.contato-icones {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+/* Cada ícone fica dentro de um quadradinho bege */
+.contato-icone {
+    width: 70px;
+    height: 60px;
+    background-color: var(--bege);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.15s, box-shadow 0.15s;
+}
+
+/* Levanta e ganha sombra ao passar o mouse */
+.contato-icone:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.contato-icone img {
+    width: 40px;
+}
+
+/* ======== MOBILE (até 600px) ======== */
+@media (max-width: 600px) {
+    .contato {
+        margin: 20px 15px;
+        padding: 25px 15px;
+    }
+
+    .contato-icone {
+        width: 56px;
+        height: 50px;
+    }
+
+    .contato-icone img {
+        width: 32px;
+    }
+}

@@ -1,0 +1,13 @@
+/* Foto Restaurante - imagem do ambiente */
+
+.foto-restaurante {
+    text-align: center;                  /* centraliza a imagem */
+    margin: var(--espaco-secao) auto;
+    padding: 0 15px;
+}
+
+.foto-restaurante img {
+    width: 100%;
+    max-width: var(--largura-conteudo);
+    border-radius: 16px;
+}
