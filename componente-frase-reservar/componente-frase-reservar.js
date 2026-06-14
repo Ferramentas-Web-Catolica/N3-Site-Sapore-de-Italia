@@ -1,8 +1,8 @@
 // Componente Frase Reservar
 // Faixa bege com a pergunta de incentivo à reserva.
 // Como usar:
-//   <link rel="stylesheet" href="frase-reservar/frase-reservar.css">
-//   <script src="frase-reservar/frase-reservar.js"></script>
+//   <link rel="stylesheet" href="componente-frase-reservar/componente-frase-reservar.css">
+//   <script src="componente-frase-reservar/componente-frase-reservar.js"></script>
 
 (function () {
     var script = document.currentScript;

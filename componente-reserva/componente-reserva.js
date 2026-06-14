@@ -1,8 +1,8 @@
 // Componente Reserva
 // Formulário "Reserve sua mesa" com validação simples.
 // Como usar:
-//   <link rel="stylesheet" href="reserva/reserva.css">
-//   <script src="reserva/reserva.js"></script>
+//   <link rel="stylesheet" href="componente-reserva/componente-reserva.css">
+//   <script src="componente-reserva/componente-reserva.js"></script>
 
 (function () {
     var script = document.currentScript;

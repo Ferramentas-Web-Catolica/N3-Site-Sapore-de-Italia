@@ -2,8 +2,8 @@
 // Card avulso de um prato (modelo reutilizável). Como o componente do Andrey
 // estava vazio, ele segue o mesmo visual dos cards do cardápio.
 // Como usar:
-//   <link rel="stylesheet" href="card-prato/card-prato.css">
-//   <script src="card-prato/card-prato.js"></script>
+//   <link rel="stylesheet" href="componente-card-prato/componente-card-prato.css">
+//   <script src="componente-card-prato/componente-card-prato.js"></script>
 
 (function () {
     var script = document.currentScript;

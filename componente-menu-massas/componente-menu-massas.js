@@ -1,8 +1,8 @@
 // Componente Menu Massas
 // Lista os pratos da categoria Massas em cards.
 // Como usar:
-//   <link rel="stylesheet" href="menu-massas/menu-massas.css">
-//   <script src="menu-massas/menu-massas.js"></script>
+//   <link rel="stylesheet" href="componente-menu-massas/componente-menu-massas.css">
+//   <script src="componente-menu-massas/componente-menu-massas.js"></script>
 
 (function () {
     var script = document.currentScript;

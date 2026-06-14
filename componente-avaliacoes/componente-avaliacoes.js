@@ -1,8 +1,8 @@
 // Componente Avaliacoes
 // Carrossel horizontal com os depoimentos dos clientes.
 // Como usar:
-//   <link rel="stylesheet" href="avaliacoes/avaliacoes.css">
-//   <script src="avaliacoes/avaliacoes.js"></script>
+//   <link rel="stylesheet" href="componente-avaliacoes/componente-avaliacoes.css">
+//   <script src="componente-avaliacoes/componente-avaliacoes.js"></script>
 
 (function () {
     var script = document.currentScript;

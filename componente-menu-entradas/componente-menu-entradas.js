@@ -1,8 +1,8 @@
 // Componente Menu Entradas
 // Lista os pratos da categoria Entradas em cards.
 // Como usar:
-//   <link rel="stylesheet" href="menu-entradas/menu-entradas.css">
-//   <script src="menu-entradas/menu-entradas.js"></script>
+//   <link rel="stylesheet" href="componente-menu-entradas/componente-menu-entradas.css">
+//   <script src="componente-menu-entradas/componente-menu-entradas.js"></script>
 
 (function () {
     var script = document.currentScript;

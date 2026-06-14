@@ -1,8 +1,8 @@
 // Componente Banner
 // Injeta a imagem do banner com o botão RESERVAR por cima.
 // Como usar:
-//   <link rel="stylesheet" href="banner/banner.css">
-//   <script src="banner/banner.js"></script>
+//   <link rel="stylesheet" href="componente-banner/componente-banner.css">
+//   <script src="componente-banner/componente-banner.js"></script>
 
 (function () {
     var script = document.currentScript;

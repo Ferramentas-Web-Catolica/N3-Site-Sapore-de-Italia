@@ -1,10 +1,10 @@
 // Componente Header
 // Injeta o HTML do cabeçalho na página no ponto onde o <script> for colocado.
 // Como usar:
-//   <link rel="stylesheet" href="header/header.css">
-//   <link rel="stylesheet" href="menu-hamburguer/menu-hamburguer.css">
-//   <script src="header/header.js"></script>
-//   <script src="menu-hamburguer/menu-hamburguer.js"></script>
+//   <link rel="stylesheet" href="componente-header/componente-header.css">
+//   <link rel="stylesheet" href="componente-menu-hamburguer/componente-menu-hamburguer.css">
+//   <script src="componente-header/componente-header.js"></script>
+//   <script src="componente-menu-hamburguer/componente-menu-hamburguer.js"></script>
 
 (function () {
     // Pega o próprio <script> que está rodando

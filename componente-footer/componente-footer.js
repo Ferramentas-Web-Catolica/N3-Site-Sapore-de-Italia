@@ -1,8 +1,8 @@
 // Componente Footer
 // Injeta o HTML do rodapé no ponto onde o <script> for colocado.
 // Como usar:
-//   <link rel="stylesheet" href="footer/footer.css">
-//   <script src="footer/footer.js"></script>
+//   <link rel="stylesheet" href="componente-footer/componente-footer.css">
+//   <script src="componente-footer/componente-footer.js"></script>
 
 (function () {
     // Referência do próprio <script> que está executando
@@ -52,6 +52,6 @@
         </footer>
     `;
 
-    // Insere o footer no lugar onde o <script src="footer/footer.js"> está
+    // Insere o footer no lugar onde o <script src="componente-footer/componente-footer.js"> está
     script.insertAdjacentHTML('beforebegin', html);
 })();

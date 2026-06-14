@@ -2,8 +2,8 @@
 // Faixa verde com os botões das categorias. Cada botão é um link que leva
 // à página daquela categoria, e o botão da página atual fica destacado.
 // Como usar:
-//   <link rel="stylesheet" href="selecao-menu/selecao-menu.css">
-//   <script src="selecao-menu/selecao-menu.js"></script>
+//   <link rel="stylesheet" href="componente-selecao-menu/componente-selecao-menu.css">
+//   <script src="componente-selecao-menu/componente-selecao-menu.js"></script>
 
 (function () {
     var script = document.currentScript;

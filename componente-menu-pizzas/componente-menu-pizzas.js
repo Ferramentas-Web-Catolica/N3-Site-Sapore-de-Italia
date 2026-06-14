@@ -1,8 +1,8 @@
 // Componente Menu Pizzas
 // Lista os pratos da categoria Pizzas em cards.
 // Como usar:
-//   <link rel="stylesheet" href="menu-pizzas/menu-pizzas.css">
-//   <script src="menu-pizzas/menu-pizzas.js"></script>
+//   <link rel="stylesheet" href="componente-menu-pizzas/componente-menu-pizzas.css">
+//   <script src="componente-menu-pizzas/componente-menu-pizzas.js"></script>
 
 (function () {
     var script = document.currentScript;

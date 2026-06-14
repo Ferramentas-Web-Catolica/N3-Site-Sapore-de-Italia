@@ -1,8 +1,8 @@
 // Componente Michelin
 // Card verde com as 3 estrelas e o texto da experiência Michelin.
 // Como usar:
-//   <link rel="stylesheet" href="michelin/michelin.css">
-//   <script src="michelin/michelin.js"></script>
+//   <link rel="stylesheet" href="componente-michelin/componente-michelin.css">
+//   <script src="componente-michelin/componente-michelin.js"></script>
 
 (function () {
     var script = document.currentScript;

@@ -2,8 +2,8 @@
 // Caixa vermelha com endereço, mapa do Google e horário de funcionamento.
 // Os ícones (pino e relógio) são SVG inline, sem depender de biblioteca externa.
 // Como usar:
-//   <link rel="stylesheet" href="localizacao/localizacao.css">
-//   <script src="localizacao/localizacao.js"></script>
+//   <link rel="stylesheet" href="componente-localizacao/componente-localizacao.css">
+//   <script src="componente-localizacao/componente-localizacao.js"></script>
 
 (function () {
     var script = document.currentScript;

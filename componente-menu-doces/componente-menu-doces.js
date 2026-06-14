@@ -1,8 +1,8 @@
 // Componente Menu Doces
 // Lista os pratos da categoria Doces em cards.
 // Como usar:
-//   <link rel="stylesheet" href="menu-doces/menu-doces.css">
-//   <script src="menu-doces/menu-doces.js"></script>
+//   <link rel="stylesheet" href="componente-menu-doces/componente-menu-doces.css">
+//   <script src="componente-menu-doces/componente-menu-doces.js"></script>
 
 (function () {
     var script = document.currentScript;

@@ -1,8 +1,8 @@
 // Componente Reservar (chamada de ação)
 // Card verde com a frase e o botão RESERVAR.
 // Como usar:
-//   <link rel="stylesheet" href="reservar/reservar.css">
-//   <script src="reservar/reservar.js"></script>
+//   <link rel="stylesheet" href="componente-reservar/componente-reservar.css">
+//   <script src="componente-reservar/componente-reservar.js"></script>
 
 (function () {
     var script = document.currentScript;

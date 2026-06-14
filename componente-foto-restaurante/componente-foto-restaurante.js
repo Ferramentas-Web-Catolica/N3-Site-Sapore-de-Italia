@@ -1,8 +1,8 @@
 // Componente Foto Restaurante
 // Mostra a foto da fachada/ambiente do restaurante.
 // Como usar:
-//   <link rel="stylesheet" href="foto-restaurante/foto-restaurante.css">
-//   <script src="foto-restaurante/foto-restaurante.js"></script>
+//   <link rel="stylesheet" href="componente-foto-restaurante/componente-foto-restaurante.css">
+//   <script src="componente-foto-restaurante/componente-foto-restaurante.js"></script>
 
 (function () {
     var script = document.currentScript;

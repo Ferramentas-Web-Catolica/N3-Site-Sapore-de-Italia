@@ -1,8 +1,8 @@
 // Componente Especialidades
 // Painel vinho com os pratos em destaque (3 cards).
 // Como usar:
-//   <link rel="stylesheet" href="especialidades/especialidades.css">
-//   <script src="especialidades/especialidades.js"></script>
+//   <link rel="stylesheet" href="componente-especialidades/componente-especialidades.css">
+//   <script src="componente-especialidades/componente-especialidades.js"></script>
 
 (function () {
     var script = document.currentScript;
