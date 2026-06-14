@@ -3,11 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <link rel="icon" type="image/png" href="componente-header/logosapore.png">
+    <!-- Pega as cores da biblioteca pra usar o mesmo fundo do site -->
+    <link rel="stylesheet" href="Biblioteca/cores.css">
     <!-- Redireciona automaticamente pra página inicial, que fica dentro da pasta paginas -->
     <meta http-equiv="refresh" content="0; url=paginas/index.html">
     <title>Sapore D'Italia</title>
+
+    <style>
+        /* Fundo bege igual ao resto do site (evita flash branco no redirecionamento) */
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background-color: var(--bege-claro);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--vermelho);
+        }
+    </style>
 </head>
 <body>
-
+    <!-- Caso o navegador não redirecione sozinho, o link abaixo leva pra home -->
+    <p>Abrindo o site... <a href="paginas/index.html">clique aqui</a> se não abrir sozinho.</p>
 </body>
 </html>
