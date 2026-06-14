@@ -1,4 +1,4 @@
-# Sapore D'Italia — Site
+# Sapore D'Italia - Site
 
 Site institucional do restaurante italiano fictício **Sapore D'Italia**, feito para a disciplina **Ferramentas Web e UX** (Prof. Claudinei Dias / Centro Universitário Católica de Santa Catarina).
 
@@ -92,7 +92,7 @@ A `Biblioteca/cores.css` centraliza tudo que se repete no site, então pra mudar
 
 ## Páginas
 
-1. **Home** — banner, Michelin, especialidades, avaliações e chamada de reserva.
-2. **Menu** — 4 páginas (entradas, massas, pizzas, doces); os botões navegam entre elas.
-3. **Reserva** — formulário de reserva + frase + botões do menu.
-4. **Contato** — redes sociais, localização com mapa e foto do restaurante.
+1. **Home** - banner, Michelin, especialidades, avaliações e chamada de reserva.
+2. **Menu** - 4 páginas (entradas, massas, pizzas, doces); os botões navegam entre elas.
+3. **Reserva** - formulário de reserva + frase + botões do menu.
+4. **Contato** - redes sociais, localização com mapa e foto do restaurante.

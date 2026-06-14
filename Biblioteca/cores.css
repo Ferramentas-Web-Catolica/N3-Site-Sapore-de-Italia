@@ -3,7 +3,7 @@
 /* Importa a fonte Poppins do Google Fonts (vários pesos) */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-/* Variáveis CSS — definem as cores do site numa central só
+/* Variáveis CSS - definem as cores do site numa central só
    Pra usar nos outros arquivos: color: var(--vermelho); */
 :root {
     --vermelho: #6B1F2A;            /* cor principal: header e footer */
@@ -21,7 +21,7 @@
     --cinza: #7A7A7A;
     --branco: #FFFFFF;
 
-    /* Largura padrão do conteúdo — alinha todos os componentes numa coluna só.
+    /* Largura padrão do conteúdo - alinha todos os componentes numa coluna só.
        Mude aqui pra ajustar a largura do site inteiro de uma vez. */
     --largura-conteudo: 800px;
 

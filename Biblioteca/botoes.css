@@ -23,7 +23,7 @@
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
 }
 
-/* Variantes por cor — basta combinar com a classe base */
+/* Variantes por cor - basta combinar com a classe base */
 
 .botao-verde {
     background-color: var(--verde);
