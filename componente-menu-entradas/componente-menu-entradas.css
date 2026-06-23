@@ -78,6 +78,17 @@
 
 /* ======== MOBILE (até 600px) ======== */
 @media (max-width: 600px) {
+    .card-prato-menu {
+        flex-wrap: wrap;       /* deixa o preco cair pra linha de baixo */
+    }
+
+    .prato-preco {
+        width: 100%;           /* ocupa a linha toda, abaixo da descricao */
+        text-align: right;
+        padding-left: 0;
+        margin-top: 6px;
+    }
+
     .menu-categoria {
         margin: 20px 15px;
     }
