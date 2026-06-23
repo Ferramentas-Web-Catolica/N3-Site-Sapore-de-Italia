@@ -68,9 +68,9 @@
 
 /* Preço fixado no canto inferior direito */
 .prato-preco {
-    position: absolute;
-    right: 20px;
-    bottom: 12px;
+    align-self: flex-end;   /* ancora o preço no rodapé do card */
+    flex-shrink: 0;          /* nunca encolhe nem fica sob o texto */
+    padding-left: 8px;
     font-size: 16px;
     font-weight: bold;
     color: var(--preto);
