@@ -2,7 +2,7 @@
 
 Site institucional do restaurante italiano fictício **Sapore D'Italia**, feito para a disciplina **Ferramentas Web e UX** (Prof. Claudinei Dias / Centro Universitário Católica de Santa Catarina).
 
-Construído com **HTML, CSS e JavaScript puro** (sem frameworks), com base no projeto de alta fidelidade do Figma. O site é dividido em **componentes**: cada parte da tela (header, banner, footer, etc.) fica numa pasta separada e é montada nas páginas.
+Construído com **HTML, CSS e JavaScript puro**, com base no projeto de alta fidelidade do Figma. O site é dividido em **componentes**: cada parte da tela (header, banner, footer, etc.) fica numa pasta separada e é montada nas páginas.
 
 
 > A raiz tem um `index.html` que redireciona pra `paginas/index.html` (a home de verdade).
